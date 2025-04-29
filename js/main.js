@@ -17,6 +17,7 @@ $('#cep').mask('00000-000', {
     placeholder: '012345-678'
 })
 
+
 $('section').validate({
     rules: {
         nome: {
