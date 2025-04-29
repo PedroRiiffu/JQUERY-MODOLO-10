@@ -1,4 +1,5 @@
-$(document).ready(function(){
+
+    $(document).ready(function(){
     $('#carousel-imagens').slick({
         autoplay:true
     });
@@ -18,7 +19,7 @@ $('#cep').mask('00000-000', {
 })
 
 
-$('section').validate({
+$('form').validate({
     rules: {
         nome: {
             required: true
@@ -40,12 +41,12 @@ $('section').validate({
             required: true
         },
     },
-    submitHandler: function (form) {
+    submitHandler: function(form) {
         alert("Sua requisição foi enviada para análise, parabéns pela aquisição!");
         console.log(form);
     },
-    invalidHandler: function (evento, validator) {
-        let camposIncorretos = validator.numberOfIvalids();
+    invalidHandler: function(evento, validador) {
+        let camposIncorretos = validador.numberOfInvalids();
         if (camposIncorretos) {
             alert("Por favor, preencha os campos para prosseguir com a compra!");
         }
